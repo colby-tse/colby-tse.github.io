@@ -1,0 +1,271 @@
+/**
+ * Style for portfolio.
+ * Author: Colby Tse
+ * Date created: 2025-05-24
+ * Version: 1.0.0
+ */
+
+/* === HTML === */
+
+* {
+	box-sizing: border-box;
+	/* border: 1px solid red; */
+}
+
+
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 16px;
+}
+
+body {
+	background-color: #0c1325;
+	color: #c3c8f0;
+}
+
+/* === Top bar === */
+
+.top-bar {
+	background-image: linear-gradient(to bottom, #0c1325, transparent);
+	display: inline-flex;
+	font-family: "Helvetica", sans-serif;
+	gap: 2rem;
+	justify-content: flex-end;
+	list-style: none;
+	margin: 0;
+	padding: 1rem;
+	position: sticky;
+	top: 0;
+	width: 100%;
+	z-index: 1000;
+}
+
+.top-bar > li {
+	text-align: center;
+}
+
+.top-bar > li > a {
+	display: block;
+	text-decoration: none;
+}
+
+@media (max-width: 600px) {
+	.top-bar {
+		justify-content: center;
+	}
+}
+
+/* === Side bar === */
+
+.side-bar {
+	bottom: 0.5rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	left: 0.5rem;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	position: fixed;
+}
+
+.side-bar li a {
+	color: #ffffff;
+	font-family: "Helvetica", sans-serif;
+	text-decoration: none;
+}
+
+/* === Icons === */
+
+.bi {
+	color: #757e9d;
+	font-size: 2rem; /* Icon size */
+	transition: color 0.5s ease;
+}
+
+.bi:hover {
+	color: #485162;
+}
+
+@media (max-width: 600px) {
+	.bi {
+		font-size: 1.5rem;
+	}
+}
+
+/* === Intro and Avatar === */
+
+.intro-container {
+	animation: fade-up 1s ease-in forwards;
+	display: flex;
+	font-family: "Helvetica", sans-serif;
+	gap: 2rem;
+	margin: 2rem 0 0 5rem;
+	user-select: none;
+	width: 90%;
+}
+
+#avatar {
+	border-radius: 50%;
+	height: 15rem;
+	width: 15rem;
+}
+
+.intro-text {
+	width: 90%;
+}
+
+#intro-greeting {
+	font-family: "Cascadia Code", monospace;
+	margin: 0;
+}
+
+#intro-greeting, #intro-role-desc a {
+	color: #71b3b1;
+	text-decoration: none;
+}
+
+#intro-greeting {
+	font-size: 1rem;
+}
+
+#intro-name {
+	color: #c3c8f0;
+	font-size: 4rem;
+	margin: 2rem 0 0;
+}
+
+#intro-role {
+	color: #757e9d;
+	font-size: 3rem;
+	margin: 1rem 0 0;
+}
+
+#intro-role-desc {
+	color: #485162;
+	margin: 2rem 0 0;
+}
+
+.contact-me-container {
+	align-items: center;
+	border: solid #71b3b1;
+	border-radius: 10px;
+	display: flex;
+	height: 3rem;
+	justify-content: center;
+	margin: 2rem 0 0 0;
+	width: 9rem;
+	transition: background-color 0.5s ease;
+}
+
+#contact-me-button {
+	color: #71b3b1;
+	font-size: 1.25rem;
+	font-family: "Cascadia Code", monospace;
+	text-decoration: none;
+	transition: color 0.5s ease;
+}
+
+.contact-me-container:hover {
+	background-color: #71b3b1;
+}
+
+.contact-me-container:hover #contact-me-button {
+	color: #0c1325;
+}
+
+@media (max-width: 600px) {
+	.intro-container {
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		margin: 1rem auto 1rem;
+		width: 75%;
+	}
+
+	#intro-greeting {
+		font-size: 0.75rem;
+		margin: 0;
+	}
+
+	#intro-name {
+		font-size: 2rem;
+		margin: 1rem 0 0;
+	}
+
+	#intro-role {
+		font-size: 1.25rem;
+		margin: 0.5rem 0 0;
+	}
+
+	#intro-role-desc {
+		margin: 1rem 0 0;
+	}
+
+	.contact-me-container {
+		align-items: center;
+		border: solid #71b3b1;
+		border-radius: 10px;
+		display: flex;
+		height: 2rem;
+		justify-content: center;
+		margin: 1rem 0 0 0;
+		width: 7rem;
+	}
+
+	#contact-me-button {
+		color: #71b3b1;
+		font-size: 0.75rem;
+		font-family: "Cascadia Code", monospace;
+		text-decoration: none;
+	}
+}
+
+/* === About me === */
+
+.about-container {
+	animation: fade 1s ease-in forwards;
+	font-family: "Helvetica", sans-serif;
+	margin: 0 auto 0;
+	padding-top: 2rem;
+	user-select: none;
+	width: 80%;
+}
+
+#about-title {
+	color: #c3c8f0;
+	font-size: 3rem;
+	margin: 0;
+}
+
+@media (max-width: 600px) {
+	.about-container {
+		width: 75%;
+	}
+
+	#about-title {
+		font-size: 1.75rem;
+	}
+}
+
+/* === Animations === */
+
+@keyframes fade {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+@keyframes fade-up {
+	0% {
+		opacity: 0;
+		padding-top: 3rem;
+	}
+	100% {
+		opacity: 1;
+		padding-top: 2rem;
+	}
+}
