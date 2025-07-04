@@ -34,9 +34,8 @@ function updateTopBar() {
 	aboutIcon.style.borderBottom = "none";
 	experienceIcon.style.borderBottom = "none";
 
-	console.log("here:" + window.location.href);
-
-	if (window.location.href.includes("home")) {
+	// Style icon bottom border color if current page
+	if (window.location.href.includes("index")) {
 		homeIcon.style.borderBottom = "solid white";
 	} else if (window.location.href.includes("about")) {
 		aboutIcon.style.borderBottom = "solid white";
