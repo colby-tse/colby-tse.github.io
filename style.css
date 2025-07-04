@@ -62,11 +62,11 @@ body {
 /* === Side bar === */
 
 .side-bar {
-	bottom: 0.5rem;
+	bottom: 1rem;
 	display: flex;
 	flex-direction: column;
 	gap: 0.5rem;
-	left: 0.5rem;
+	left: 1rem;
 	list-style: none;
 	margin: 0;
 	padding: 0;
@@ -77,6 +77,13 @@ body {
 	color: #ffffff;
 	font-family: "Helvetica", sans-serif;
 	text-decoration: none;
+}
+
+@media (max-width: 600px) {
+	.side-bar {
+		left: auto;
+		right: 1rem;
+	}
 }
 
 /* === Icons === */
